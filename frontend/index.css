@@ -1,4 +1,9 @@
-p {
-    font-family: 'Roboto' sans-serif;
-    }
-    
+@font-face {
+    font-family: 'Roboto';
+    src: url('roboto.eot'), /* IE9 Compat Modes */
+    url('roboto.woff') format('woff'), /* Modern Browsers */
+    url('src/roboto-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+  }
+  body{
+    font-family: 'Roboto', sans-serif;
+}
