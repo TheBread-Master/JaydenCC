@@ -26,7 +26,7 @@
   --green-3: #AAC596;
   --green-4: #95B77B;
   --green-5: #80A861;
-  --green-6: #6C9150;
+  --green-6: #74A12E;
   --green-7: #587641;
   --green-8: #455C33;
   --green-9: #314224;
@@ -51,7 +51,7 @@
 }
 .dark {
   --bg: var(--gray-7);
-  --bg-nav: linear-gradient(to right, var(--green-7), var(--green-10));
+  --bg-nav: linear-gradient(to right, var(--gray-8), var(--gray-8));
   --bg-dropdown: var(--gray-6);
   --text: var(--green-3);
   --border-color: var(--blue-10);
@@ -78,12 +78,15 @@
     width: 100%;
     background: var(--bg-nav);
     color: var(--text);
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out; 
   }
   .navbar-nav {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-evenly;
     height: 100%;
+    font-weight: bold;
+    padding-right: 20em; 
   }
   header{
     padding: 2em;
@@ -92,6 +95,7 @@
     padding-top: 5em;
     padding-bottom: 7em;
     text-align: center;
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
   }
   .dropdown{
     position: absolute;
@@ -115,11 +119,13 @@
     transform: translateX(-40%);
     
     transition: opacity .15s ease-out;
+    transition: background 500ms ease-in-out, color 1000ms ease-in-out;
   }
   
   .has-dropdown:focus-within .dropdown{
     opacity:1;
     pointer-events: auto;
+    transition: 500ms ease-in-out;
   }
 
   .dropdown-item a {
@@ -140,13 +146,15 @@
     vertical-align: middle;
     margin-right: 10px;
   }
-
+  .icon {
+    size:18px;
+  }
 
   article{
     font-family: "Roboto-regular", sans-serif;
     font-size: 18px;
     text-align: justify;
-    margin: 35px 570px 35px 570px;
+    margin: 35px 20em 35px 20em;
     letter-spacing: 0.25px
   }
   h1{
